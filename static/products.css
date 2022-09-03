@@ -1,0 +1,51 @@
+body {
+  background: #555;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 1rem;
+
+  background-color: #aaa;
+
+  color: inherit;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: .2s ease-in-out;
+}
+
+img {
+  object-fit: scale-down;
+  height: 200px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+header a {
+  padding: .5rem 1rem;
+  width: fit-content;
+
+  background: #224;
+  border-radius: 5px;
+  color: #fff;
+}
+
+main a:hover {
+  transform: scale(1.1);
+}

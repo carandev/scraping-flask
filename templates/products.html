@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Products List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{url_for('static', filename='products.css')}}" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Lista de productos</h1>
+    <a href="/">Buscar otro producto</a>
+  </header>
+  <main>
+    {%for product in products%}
+    <a href="{{product['url']}}" target="_blank">
+      <h3>{{product['title']}}</h3>
+      <img src={{product['img_url']}} alt={{product['title']}}>
+      <p>{{product['price']}}</p>
+    </a>
+    {%endfor%}
+  </main>
+</body>
+
+</html>

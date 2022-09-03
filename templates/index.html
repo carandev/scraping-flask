@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MercadoLibre Scraping</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{url_for('static', filename='index.css')}}" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Productos de MercadoLibre</h1>
+  <form action="/search" method="post">
+    <h3>Busca lo que desees</h3>
+    <input type="text" name="word" placeholder="Ingresa el nombre del producto">
+    <button type="submit">Buscar</button>
+  </form>
+</body>
+
+</html>
