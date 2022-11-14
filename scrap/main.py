@@ -15,8 +15,8 @@ def search_products(word_search = 'teclado'):
     products = []
 
     for product_container in product_containers:
-        title = product_container.find('h2').get_text()
-        url = product_container.find('a', attrs={'class': 'ui-search-item__group__element shops-custom-secondary-font ui-search-link'})['href']
+        title = product_container.findAll('a')[1].get_text()
+        url = product_container.findAll('a')[1]['href']
         price = product_container.find('span', attrs={'class': 'price-tag-fraction'}).get_text()
         img_url = product_container.find('img')['data-src']
 
