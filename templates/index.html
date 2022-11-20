@@ -2,19 +2,40 @@
 <html lang="en">
 
 <head>
-  <title>MercadoLibre Scraping</title>
+  <title>MercadoLibre y OLX Scraping</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="{{url_for('static', filename='index.css')}}" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Productos de MercadoLibre</h1>
-  <form action="/search" method="post">
+  <header>
+    <a href="/">Inicio</a>
+    <h2>Pygroup</h2>
+    <a href="/about">Nosotros</a>
+  </header>
+  <h1>Productos de MercadoLibre y OLX</h1>
+  <form>
     <h3>Busca lo que desees</h3>
     <input type="text" name="word" placeholder="Ingresa el nombre del producto">
     <button type="submit">Buscar</button>
   </form>
+  <script>
+    const form = document.querySelector('form')
+
+    form.addEventListener('submit', event => {
+      event.preventDefault()
+
+      const word = form['word'].value
+
+      if (word.trim() === '') {
+        window.location.href = `/search/teclado`
+      } else {
+        window.location.href = `/search/${form['word'].value}`
+      }
+
+    })
+  </script>
 </body>
 
 </html>

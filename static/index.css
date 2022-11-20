@@ -3,8 +3,19 @@ h1, h3 {
   color: #fff;
 }
 
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
 body {
-  margin: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,7 +37,7 @@ input::placeholder {
   color: #999;
 }
 
-button {
+a, button {
   padding: .5rem 1rem;
   width: fit-content;
 
@@ -36,4 +47,5 @@ button {
   font-size: 1.1rem;
   outline: none;
   border: none;
+  cursor: pointer;
 }
