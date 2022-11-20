@@ -10,7 +10,6 @@ def index():
 @app.route('/search/', methods=['POST'])
 def search_word():
     word = request.form['word']
-    print(word)
     products = search_products(word)
 
     return render_template('products.html', products = products)
